@@ -1,0 +1,12 @@
+-- PERSONA 2
+--
+-- Orden:
+-- 1. Crear base.
+-- 2. Crear usuarios.
+-- 3. Crear publicaciones.
+-- 4. Relacionar usuario -> publicaciones.
+--
+-- Si cambias nombres que afecten frontend/backend,
+-- actualiza docs/API.md.
+--
+-- TODO Persona 2: escribir esquema cuando el modelo esté acordado.

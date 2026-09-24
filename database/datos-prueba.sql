@@ -1,0 +1,8 @@
+-- PERSONA 2
+--
+-- Datos ficticios para desarrollo.
+-- NO usar datos personales reales.
+--
+-- TODO:
+-- - usuarios ficticios
+-- - publicaciones ficticias de los tres tipos

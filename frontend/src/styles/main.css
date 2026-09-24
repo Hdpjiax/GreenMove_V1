@@ -1,0 +1,25 @@
+/*
+ * PERSONA 5 - ESTILOS GLOBALES
+ *
+ * Primera tarea:
+ * - colores
+ * - tipografía
+ * - fondo
+ * - espaciados
+ * - tamaños base
+ *
+ * Diseñar primero para celular.
+ */
+
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  padding: 1rem;
+}
