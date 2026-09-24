@@ -1,0 +1,16 @@
+openapi: 3.1.0
+info:
+  title: Greenmove API
+  version: 0.1.0
+  description: Contrato base para el MVP universitario Greenmove.
+servers:
+  - url: http://localhost:8080
+paths: {}
+components:
+  schemas:
+    PublicationType:
+      type: string
+      enum:
+        - UBER_SPLIT
+        - OWN_CAR
+        - RIDE_REQUEST

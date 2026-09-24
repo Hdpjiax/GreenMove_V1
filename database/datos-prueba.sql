@@ -5,4 +5,5 @@
 --
 -- TODO:
 -- - usuarios ficticios
--- - publicaciones ficticias de los tres tipos
+-- - publicaciones ficticias de los tres tipos oficiales:
+--   UBER_SPLIT, OWN_CAR, RIDE_REQUEST

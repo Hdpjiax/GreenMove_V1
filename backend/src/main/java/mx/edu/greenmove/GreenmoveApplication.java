@@ -1,4 +1,4 @@
-package com.raite;
+package mx.edu.greenmove;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * No colocar aquí lógica de usuarios, publicaciones o SQL.
  */
 @SpringBootApplication
-public class RaiteApplication {
+public class GreenmoveApplication {
     public static void main(String[] args) {
-        SpringApplication.run(RaiteApplication.class, args);
+        SpringApplication.run(GreenmoveApplication.class, args);
     }
 }

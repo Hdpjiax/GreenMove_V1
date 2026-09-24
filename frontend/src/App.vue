@@ -9,7 +9,7 @@
     No construir todo el proyecto aquí.
   -->
   <main class="app-shell">
-    <h1>RAITE Campus</h1>
+    <h1>Greenmove</h1>
     <p>Proyecto inicial listo para comenzar.</p>
   </main>
 </template>

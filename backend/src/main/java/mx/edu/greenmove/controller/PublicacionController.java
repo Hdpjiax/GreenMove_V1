@@ -1,4 +1,4 @@
-package com.raite.controller;
+package mx.edu.greenmove.controller;
 
 /*
  * PERSONA 2

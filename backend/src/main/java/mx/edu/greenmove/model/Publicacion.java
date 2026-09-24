@@ -1,12 +1,12 @@
-package com.raite.model;
+package mx.edu.greenmove.model;
 
 /*
  * PERSONA 2 - MODELO DE PUBLICACIÓN
  *
  * Tipos:
- * - COMPARTIR_UBER
- * - OFRECER_AUTO
- * - PEDIR_RAITE
+ * - UBER_SPLIT
+ * - OWN_CAR
+ * - RIDE_REQUEST
  *
  * Campos a discutir:
  * id, usuario, tipo, origen, destino, fecha, hora,

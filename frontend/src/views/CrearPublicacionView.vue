@@ -3,9 +3,9 @@
     PERSONA 4 - CREAR PUBLICACIÓN
 
     Tipos:
-    - COMPARTIR_UBER
-    - OFRECER_AUTO
-    - PEDIR_RAITE
+    - UBER_SPLIT
+    - OWN_CAR
+    - RIDE_REQUEST
 
     Antes de conectar:
     - revisar docs/API.md

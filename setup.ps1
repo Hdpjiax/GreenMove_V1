@@ -1,16 +1,32 @@
-Write-Host "RAITE Campus - preparación inicial" -ForegroundColor Cyan
+Write-Host "Greenmove - preparacion inicial" -ForegroundColor Cyan
 
-if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    Write-Host "Git no está instalado." -ForegroundColor Yellow
-} else {
-    if (-not (Test-Path ".git")) {
-        git init
-        Write-Host "Repositorio Git inicializado." -ForegroundColor Green
+$requiredCommands = @("git", "docker", "java")
+
+foreach ($command in $requiredCommands) {
+    if (-not (Get-Command $command -ErrorAction SilentlyContinue)) {
+        Write-Host "$command no esta disponible en PATH." -ForegroundColor Yellow
     } else {
-        Write-Host "Git ya estaba inicializado." -ForegroundColor DarkGray
+        Write-Host "$command disponible." -ForegroundColor DarkGray
     }
 }
 
+if (-not (Test-Path ".git")) {
+    git init
+    Write-Host "Repositorio Git inicializado." -ForegroundColor Green
+} else {
+    Write-Host "Git ya estaba inicializado." -ForegroundColor DarkGray
+}
+
+if (-not (Test-Path ".env")) {
+    Copy-Item ".env.example" ".env"
+    Write-Host "Se creo .env desde .env.example." -ForegroundColor Green
+} else {
+    Write-Host ".env ya existe; no se sobreescribio." -ForegroundColor DarkGray
+}
+
 Write-Host ""
-Write-Host "Revisa README.md y docs/TAREAS.md antes del primer commit."
-Write-Host 'Commit sugerido: git add . ; git commit -m "chore: crea estructura inicial de RAITE Campus"'
+Write-Host "Siguiente validacion recomendada:"
+Write-Host "  docker compose config"
+Write-Host "  docker compose run --rm backend mvn clean test"
+Write-Host ""
+Write-Host "Lee README.md, AGENTS.md y docs/PRODUCT.md antes de implementar features."

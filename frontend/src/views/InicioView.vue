@@ -3,9 +3,9 @@
     PERSONA 4 - MURO
 
     Mostrar juntos:
-    - compartir Uber/taxi
-    - ofrecer auto
-    - pedir raite
+    - UBER_SPLIT / Comparto Uber
+    - OWN_CAR / Tengo auto
+    - RIDE_REQUEST / Necesito raite
 
     Orden:
     1. datos simulados

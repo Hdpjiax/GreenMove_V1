@@ -1,4 +1,4 @@
-package com.raite.controller;
+package mx.edu.greenmove.controller;
 
 /*
  * PERSONA 1
@@ -15,7 +15,7 @@ package com.raite.controller;
  * - acordar rutas con Persona 3
  * - probar con Postman
  *
- * No poner consultas directas a MySQL aquí.
+ * No poner consultas directas a la base de datos aquí.
  */
 public class UsuarioController {
     // TODO Persona 1: implementar endpoints uno por uno.

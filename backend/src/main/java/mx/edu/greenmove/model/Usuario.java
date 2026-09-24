@@ -1,4 +1,4 @@
-package com.raite.model;
+package mx.edu.greenmove.model;
 
 /*
  * PERSONA 1 - MODELO DE USUARIO

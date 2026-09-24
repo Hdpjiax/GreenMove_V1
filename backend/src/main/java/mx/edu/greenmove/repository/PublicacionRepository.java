@@ -1,4 +1,4 @@
-package com.raite.repository;
+package mx.edu.greenmove.repository;
 
 /*
  * PERSONA 2

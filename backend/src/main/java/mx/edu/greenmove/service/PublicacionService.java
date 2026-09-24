@@ -1,4 +1,4 @@
-package com.raite.service;
+package mx.edu.greenmove.service;
 
 /*
  * PERSONA 2
