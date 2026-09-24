@@ -1,6 +1,4 @@
-# RAITE Campus
-
-Proyecto universitario para coordinar traslados entre estudiantes.
+# GreenMove
 
 ## Stack inicial
 - Java + Spring Boot
@@ -18,10 +16,7 @@ Registro -> Login -> Muro -> Crear publicación -> Perfil
 ## Antes de trabajar
 1. Lee `docs/TAREAS.md`.
 2. Revisa los comentarios del archivo que te toca.
-3. Crea una rama para una sola tarea.
-4. Prueba antes de hacer commit.
-5. Haz Pull Request.
+3. Prueba antes de hacer commit.
+4. Haz Pull Request.
 
-## No agregar todavía
-Pagos, chat en tiempo real, mapas avanzados, GPS en tiempo real,
-microservicios, Docker, notificaciones push ni algoritmos complejos.
+
