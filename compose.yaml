@@ -1,0 +1,77 @@
+name: greenmove
+
+services:
+  database:
+    image: postgis/postgis:17-3.5
+    container_name: greenmove-database
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+    ports:
+      - "${POSTGRES_PORT}:5432"
+
+    volumes:
+      - greenmove_postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d:ro
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+  backend:
+    image: maven:3.9-eclipse-temurin-21
+    container_name: greenmove-backend
+    restart: unless-stopped
+
+    working_dir: /workspace
+
+    volumes:
+      - ./backend:/workspace
+      - greenmove_maven_cache:/root/.m2
+
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/${POSTGRES_DB}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      database:
+        condition: service_healthy
+
+    command: mvn spring-boot:run
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: greenmove-pgadmin
+    restart: unless-stopped
+
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+
+    ports:
+      - "${PGADMIN_PORT}:80"
+
+    volumes:
+      - greenmove_pgadmin_data:/var/lib/pgadmin
+
+    depends_on:
+      database:
+        condition: service_healthy
+
+    profiles:
+      - tools
+
+volumes:
+  greenmove_postgres_data:
+  greenmove_pgadmin_data:
+  greenmove_maven_cache:
