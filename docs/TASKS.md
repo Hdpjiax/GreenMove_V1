@@ -19,7 +19,7 @@
 ## Producto
 
 - [ ] Definir modelo minimo de usuario.
-- [ ] Definir modelo minimo de publicacion.
+- [ ] Definir moelo minimo de publicacion.
 - [ ] Documentar errores y respuestas API.
 - [ ] Agregar datos semilla ficticios.
 
@@ -28,3 +28,4 @@
 - [ ] Sistema visual.
 - [ ] Pantallas finales.
 - [ ] Capacitor.
+
